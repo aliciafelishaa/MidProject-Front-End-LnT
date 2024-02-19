@@ -1,0 +1,279 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+  100% {
+    /* opacity: 1; */
+    transform: translateX(10px);
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 3px;
+  background: rgb(252, 216, 246);
+  background-image: linear-gradient(
+    114deg,
+    rgb(214, 183, 209) 22%,
+    rgba(255, 250, 248, 0.04044507121482088) 97%
+  );
+  background-repeat: no-repeat;
+}
+
+/* UTILITY CLASS */
+.section {
+  margin-inline: auto;
+  max-width: 1300px;
+}
+
+main {
+  margin-top: 80px;
+}
+
+body {
+  background: rgb(252, 216, 246);
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    114deg,
+    rgba(252, 216, 246, 1) 22%,
+    rgb(255, 250, 248) 97%
+  );
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nameLogo {
+  color: var(--Red, #3b0839);
+  font-family: Jost;
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: normal;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin-left: 30px;
+  margin-right: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000; /* Change color as needed */
+  font-family: "Jost", sans-serif; /* Apply the font */
+  font-weight: bold;
+  color: var(--Red, #3b0839);
+  font-family: Jost;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+nav ul li a:hover {
+  color: #464246; /* Change color as needed */
+}
+
+.navbar__mobile-hamburger {
+  display: none;
+  font-size: 2rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 800px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar__buttons {
+    display: none;
+  }
+
+  .navbar__mobile-hamburger {
+    display: block;
+  }
+
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imagePeople {
+    scale: 0.8;
+    transform: translate(-1rem, 0);
+  }
+}
+
+.contactme {
+  padding-top: 1rem;
+  color: #000;
+  font-family: MuseoModerno;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideUp 1s ease-in;
+}
+
+.kotak {
+  margin-left: 3rem;
+  margin-top: 2rem;
+  padding: 1.2rem;
+  width: 34.5rem;
+  height: 37.6875rem;
+  border-radius: 5rem;
+  border: 2px solid #1e1e1e;
+  background: #3b0839;
+  animation: slideIn 1s ease-in;
+}
+
+.text-name input {
+  margin-left: 1rem;
+  padding: 1rem;
+  width: 30rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  border-radius: 3.125rem;
+  background: #fff;
+  border: none;
+  
+}
+
+.text-form {
+  padding: 1rem;
+  color: #fff;
+  font-family: Jost;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.textarea-message {
+  margin-left: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.button-submit {
+  margin-top: 10px;
+  margin-left: 30px;
+  width: 6rem;
+  height: 1.9375rem;
+  flex-shrink: 0;
+  border-radius: 1.25rem;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  font-family: Jost;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.button-submit:hover {
+  color: #000000;
+  background-color: #cac4ca;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    animation: slideUp 1s ease-in;
+}
+.aa{
+    display: flex;
+    flex-direction: column;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 5rem;
+  width: 100%;
+  height: 6rem;
+  background-color: white;
+}
+
+.footer-text {
+  color: #3b0839;
+  font-family: Jost;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.footer-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.gmail-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #3b0839;
+  font-family: Jost;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
